@@ -37,6 +37,7 @@ class HashTable:
                     return self.hash_table[hash_value][i][1]
             return None #동일한 키가 존재하지 않을때 return None
         else: return None
+        
     def print(self):
         print(self.hash_table)
         
@@ -56,3 +57,4 @@ print('ht.read(2) 결과 = ',ht.read(2))
 
 ht.insert(4,'d')
 ht.print()
+#이 방식은 끝없이 key, value를 넣을 수 있지만, 공간 효율성이 떨어진다.
