@@ -28,9 +28,15 @@ class HashTable:
             self.hash_table[hash_value]=[[gen_key,value]]
     #FIXME: read작성 https://davinci-ai.tistory.com/19
     def read(self, key):
-        hasH_value=self.hash_function(hash(key))
-        return self.hash_table[hasH_value]
-    
+        gen_key=hash(key)
+        hash_value = self.hash_function(gen_key)
+        
+        if self.hash_table[hash_value]!=0:
+            for i in range(len(self.hash_table[hash_value])):
+                if self.hash_table[hash_value][i][0] == gen_key:
+                    return self.hash_table[hash_value][i][1]
+            return None #동일한 키가 존재하지 않을때 return None
+        else: return None
     def print(self):
         print(self.hash_table)
         
