@@ -1,3 +1,6 @@
+#시간복잡도 o(n**3)
+#노드의 개수n개-> n번의 단계수행,
+#각 단계마다 o(n**2)의 계산 수행
 import sys
 input=sys.stdin.readline
 
@@ -26,7 +29,7 @@ for k in range(1,n+1):
 for a in range(1,n+1):
     for b in range(1,n+1):
         if graph[a][b]==INF:
-            print("INF", end=" ")
+            print("0", end=" ")
         else:
             print(graph[a][b],end=" ")
     print()
