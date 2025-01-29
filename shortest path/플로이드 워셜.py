@@ -1,5 +1,5 @@
 #시간복잡도 o(n**3)
-#노드의 개수n개-> n번의 단계수행,
+#노드의 개수n개-> n번의 단계 수행,
 #각 단계마다 o(n**2)의 계산 수행
 import sys
 input=sys.stdin.readline
